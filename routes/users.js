@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const router = require('express').Router()
+const usersModel = require('../models/user')
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/:username', async (req, res) => {
+    try {
+        const users = await usersModel.find({
+            username: new RegExp(req.params.username, 'i')
+        })
 
-module.exports = router;
+        res.status(200).json(users)
+    } catch (e) {
+        res.status(500).json(e)
+    }
+})
+
+module.exports = router
