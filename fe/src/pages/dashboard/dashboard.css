@@ -1,0 +1,281 @@
+.dashboardContainer {
+  width: 500px;
+  --navWidth: 240px;
+  --navBarHeight: 56px;
+}
+
+.dashboardNavBar {
+  background-color: royalblue;
+  height: var(--navBarHeight);
+  padding-right: 20px;
+  width: calc(100% - var(--navWidth));
+  position: absolute;
+  left: var(--navWidth);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  z-index: 3;
+}
+
+.dashboardNavBar span {
+  color: white;
+  text-decoration: none;
+}
+
+.dashboardNavBar a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.dashboardNavBar a:hover {
+  text-decoration: underline;
+}
+
+.dashboardNav {
+  /* background-color: royalblue; */
+  position: absolute;
+  width: var(--navWidth);
+  min-height: 100vh;
+  box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 4;
+  background-color: white;
+}
+
+.dashboardContent {
+  position: absolute;
+  top: var(--navBarHeight);
+  left: var(--navWidth);
+  /* background-color: grey; */
+  height: calc(100% - var(--navBarHeight));
+  width: calc(100% - var(--navWidth));
+  box-sizing: border-box;
+}
+
+.dashboardNavImg {
+  max-width: 70px;
+  padding: 25px;
+}
+
+.dashboardNavSearch {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+.dashboardNavUl {
+  overflow-y: auto;
+  max-height: calc(100vh - 165px);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.dashboardNavSearchBar {
+  box-sizing: border-box;
+  border: none;
+  /* width: 100%; */
+  height: 32px;
+  padding: 0 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  /* outline: 1px grey solid; */
+  width: calc(100% - 10px);
+  background-color: rgb(230, 230, 230);
+}
+
+.dashboardNavSearchBar:focus {
+  /* outline: solid 2px royalblue; */
+  outline: none;
+}
+
+.dashboardNavUl li {
+  list-style: none;
+  text-align: left;
+}
+
+.dashboardNavUl li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboardNavUl li a div {
+  padding-left: 16px;
+  height: 45px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.dashboardNavUl li a div:hover {
+  background-color: rgb(250, 250, 250);
+}
+
+.currentConversation {
+  background-color: rgb(250, 250, 250);
+}
+
+/* .dashboardContent {
+  display: flex;
+  flex-direction: column;
+} */
+
+.dashboardChatTitle {
+  width: 100%;
+  height: var(--navBarHeight);
+  position: absolute;
+  background-color: rgb(240, 242, 245);
+  box-sizing: border-box;
+  line-height: var(--navBarHeight);
+  /* color: white; */
+  text-align: left;
+  font-weight: bolder;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.dashboardChatTitle span {
+  padding-left: 12px;
+}
+
+.dashboardChatZone {
+  position: absolute;
+  background-color: rgb(240, 242, 245);
+  height: calc(100% - 2 * var(--navBarHeight));
+  width: 100%;
+  top: var(--navBarHeight);
+  border-bottom: red;
+}
+
+.dashboardChat {
+  position: absolute;
+  height: var(--navBarHeight);
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(240, 242, 245);
+}
+
+.dashboardChatForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.dashboardChatButton {
+  height: 32px;
+  width: 64px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: royalblue;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dashboardChatButton:focus {
+  outline: none;
+}
+
+.dashboardChatButton:hover {
+  background-color: rgb(55, 97, 224);
+  cursor: pointer;
+}
+
+.dashboardChatInput {
+  box-sizing: border-box;
+  border: none;
+  /* width: 100%; */
+  height: 32px;
+  padding: 0 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  /* outline: 1px grey solid; */
+  width: calc(100% - 100px);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.dashboardChatInput:focus {
+  outline: none;
+}
+
+.dashboardChatZone {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.message {
+  
+  background-color: white;
+  color:black;
+  text-align: left;
+  border-radius: 5px;
+  margin: 10px 25px;
+  padding: 10px 15px;
+  /* width: auto; */
+  max-width: calc(100% - 33%);
+  word-wrap: break-word;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageInfo {
+  font-size: 11px;
+  margin-top: 10px;
+  color: rgb(189, 189, 189);
+}
+
+.mineMsg {
+  align-self: flex-end;
+  background-color: royalblue;
+  color: white;
+}
+
+.dashboardSearchList {
+  overflow-y: auto;
+  max-height: calc(100vh - 165px);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.dashboardSearchList li {
+  list-style: none;
+  text-align: left;
+}
+
+.dashboardSearchList li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dashboardSearchList li a div {
+  padding-left: 16px;
+  height: 45px;
+  line-height: 45px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.dashboardSearchList li a div:hover {
+  background-color: rgb(250, 250, 250);
+}

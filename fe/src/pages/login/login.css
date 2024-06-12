@@ -1,0 +1,78 @@
+.loginContainer {
+  background-color: royalblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.loginForm {
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  margin: 50px;
+  right: 100%;
+  border-radius: 2px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.loginInput {
+  height: 40px;
+  border: none;
+  border-radius: 2px;
+  font-size: 13px;
+  padding-left: 20px;
+  outline: 1px grey solid;
+  caret-color: royalblue;
+}
+.loginInput:focus {
+  outline: solid 2px royalblue;
+}
+
+.loginButton {
+  height: 40px;
+  border: none;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  background-color: royalblue;
+  color: white;
+}
+
+.loginButton:focus {
+  outline: none;
+}
+
+.loginButton:hover {
+  background-color: rgb(55, 97, 224);
+  cursor: pointer;
+}
+
+.loginSpan {
+  color: black;
+  font-size: 13px;
+}
+
+.loginRegisterLink {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+.loginRegisterLink:hover {
+  text-decoration: underline;
+}
+
+.loginLogo {
+  max-height: 200px;
+  margin: 50px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
